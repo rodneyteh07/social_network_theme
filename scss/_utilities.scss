@@ -30,6 +30,16 @@
     color: $primary-color;
 }
 
+.round-img {
+    border-radius: 50%;
+}
+
+.line {
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 0;
+}
+
 // Backgrounds
 .bg {
     &-primary {
@@ -97,6 +107,51 @@
     }
 }
 
+// Alerts
+.alert {
+    padding: 0.8rem;
+    margin: 1rem;
+    opacity: 0.9;
+    background: $light-color;
+    color: #333;
+
+    &.alert-primary {
+        @include set-background($primary-color);
+    }
+    &.alert-dark {
+        @include set-background($dark-color);
+    }
+    &.alert-success {
+        @include set-background($success-color);
+    }
+    &.alert-danger {
+        @include set-background($danger-color);
+    }
+}
+
+// Badges
+.badge {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    text-align: center;
+    margin: 0.3rem;
+    background: $light-color;
+    color: #333;
+
+    &.badge-primary {
+        @include set-background($primary-color);
+    }
+    &.badge-dark {
+        @include set-background($dark-color);
+    }
+    &.badge-success {
+        @include set-background($success-color);
+    }
+    &.badge-danger {
+        @include set-background($danger-color);
+    }
+}
+
 .dark-overlay {
     height: 100%;
     width: 100%;
@@ -104,4 +159,15 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.table {
+    th, td {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    th {
+        background: $light-color;
+    }
 }
